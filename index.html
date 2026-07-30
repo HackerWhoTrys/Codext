@@ -104,6 +104,10 @@ a[href^="tel"] {
 
 @media (max-width: 600px) {
 
+.mobile-hide {
+    display: none;
+}
+    
     header h1 {
     font-size: 35px;
     margin-bottom: 20px;
@@ -155,12 +159,14 @@ header p {
 
 <header style="position:relative;">
 
-<img src="colored-logo.png"
+
+<img class="mobile-hide" 
+     src="colored-logo.png"
      alt="Codext Logo"
      width="110"
      style="position:absolute; left:20px; top:20px;">
 
-<div style="position:absolute; right:20px; top:20px; text-align:right;">
+<div class="mobile-hide" style="position:absolute; right:20px; top:20px; text-align:right;">
 
 <p style="margin:0; font-size:23px;">
 Email: <span style="color:#d1d5db;">Hounam.AZ@Outlook.com</span><br>
@@ -168,6 +174,7 @@ Phone: <span style="color:#d1d5db;">+1 (416)-997-6400</span>
 </p>
 
 </div>
+
 
 <h1>Codext</h1>
 
