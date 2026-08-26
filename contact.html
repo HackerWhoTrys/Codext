@@ -65,6 +65,11 @@ a {
     color: white;
     text-decoration: none;
 }
+
+.cancel-option {
+    color: red;
+}
+
 </style>
 
 </head>
@@ -96,6 +101,7 @@ a {
 
 <select name="package">
     <option value="" selected>Choose a Website Package</option>
+    <option value="none" class="cancel-option">Cancel / No Website Package</option>
     <option value="Starter - $80">Starter - $80</option>
     <option value="Business - $120">Business - $120</option>
     <option value="Premium - $200">Premium - $200</option>
@@ -103,6 +109,7 @@ a {
 
 <select name="service">
     <option value="" disabled selected>Choose Another Service</option>
+    <option value="none" class="cancel-option">Cancel / No Additional Service</option>
 
     <option value="Website Maintenance - From $15/month">Website Maintenance - From $15/month</option>
     <option value="Website Updates & Improvements - From $30">Website Updates & Improvements - From $30</option>
@@ -117,6 +124,8 @@ a {
 
 <select name="business_type" required>
     <option value="" disabled selected>Choose Your Business Type</option>
+    <option value="none" class="cancel-option">None</option>
+
     <option value="Restaurant / Food">Restaurant / Food</option>
     <option value="Home Services">Home Services</option>
     <option value="Retail / Shop">Retail / Shop</option>
@@ -162,11 +171,11 @@ const websiteDetails = document.getElementById('website-details');
 const pagesInput = document.getElementById('pages');
 
 packageSelect.addEventListener('change', function () {
-    if (this.value !== "") {
-        websiteDetails.style.display = "block";
-    } else {
+    if (this.value === "" || this.value === "none") {
         websiteDetails.style.display = "none";
         pagesInput.value = "";
+    } else {
+        websiteDetails.style.display = "block";
     }
 });
 </script>
