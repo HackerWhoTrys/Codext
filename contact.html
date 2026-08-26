@@ -149,7 +149,14 @@ a {
     <option value="Other">Other</option>
 </select>
 
-<input type="text" name="pages" placeholder="What pages do you want? (Example: Home, About, Services, Contact)">
+<div id="pages-field" style="display: none;">
+    <input
+        type="text"
+        name="pages"
+        id="pages"
+        placeholder="What pages do you want? (Example: Home, About, Services, Contact)"
+    >
+</div>
 
 <textarea name="message" placeholder="Tell us what you need"></textarea>
 
@@ -162,5 +169,20 @@ a {
 
 </div>
 
+<script>
+const packageSelect = document.querySelector('select[name="package"]');
+const pagesField = document.getElementById('pages-field');
+const pagesInput = document.getElementById('pages');
+
+packageSelect.addEventListener('change', function () {
+    if (this.value !== "") {
+        pagesField.style.display = "block";
+    } else {
+        pagesField.style.display = "none";
+        pagesInput.value = "";
+    }
+});
+</script>
+    
 </body>
 </html>
