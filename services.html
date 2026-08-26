@@ -7,11 +7,15 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Services | Codext™</title>
+<title>Services & Pricing | Codext™</title>
 
-<meta name="description" content="Explore Codext™ services including website development, website maintenance, technology support, Google Business Profile setup, SEO, and business cybersecurity training.">
+<meta name="description" content="Explore Codext™ services and pricing, including website development, website maintenance, technology support, Google Business services, SEO setup, business email setup, and cybersecurity training.">
 
 <style>
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -20,23 +24,37 @@ body {
     color: #222;
 }
 
+
+/* =========================
+   HEADER
+========================= */
+
 header {
     background: #111827;
     color: white;
-    padding: 20px;
+    padding: 25px 20px;
     text-align: center;
 }
 
 header h1 {
-    font-size: 45px;
-    margin: 10px 0 20px;
+    font-size: 48px;
+    margin: 5px 0 20px;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 nav a {
     color: white;
-    margin: 10px;
+    margin: 5px 10px;
     text-decoration: none;
     font-size: 16px;
+    transition: 0.2s;
 }
 
 nav a:hover {
@@ -48,67 +66,140 @@ nav a.active {
     font-weight: bold;
 }
 
+
+/* =========================
+   MAIN
+========================= */
+
 main {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 60px 25px;
 }
+
+
+/* =========================
+   INTRO
+========================= */
 
 .intro {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 65px;
 }
 
 .intro h2 {
-    font-size: 36px;
+    font-size: 42px;
+    margin-bottom: 15px;
 }
 
 .intro p {
+    max-width: 800px;
+    margin: auto;
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.7;
+    color: #4b5563;
 }
 
+
+/* =========================
+   CATEGORY
+========================= */
+
 .category {
-    margin-bottom: 50px;
+    margin-bottom: 75px;
 }
 
 .category h2 {
     text-align: center;
-    font-size: 30px;
-    margin-bottom: 25px;
+    font-size: 32px;
+    margin-bottom: 35px;
 }
+
+
+/* =========================
+   CARDS
+========================= */
 
 .cards {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    align-items: stretch;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
 .card {
     background: white;
-    width: 280px;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0px 5px 15px #ccc;
-    box-sizing: border-box;
+    width: 350px;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.14);
 }
 
 .card h3 {
     margin-top: 0;
-    font-size: 21px;
+    margin-bottom: 15px;
+    font-size: 23px;
 }
 
 .card p {
-    line-height: 1.6;
+    line-height: 1.7;
+    color: #4b5563;
 }
 
-footer {
-    background: #111827;
+.price {
+    font-size: 32px;
+    color: #2563eb !important;
+    font-weight: bold;
+    margin: 10px 0 20px;
+}
+
+.badge {
+    display: inline-block;
+    background: #2563eb;
     color: white;
-    padding: 20px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.note {
     text-align: center;
-    margin-top: 50px;
+    color: #6b7280;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    background: white;
+    border-radius: 18px;
+    padding: 50px 25px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+}
+
+.cta h2 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.cta p {
+    color: #4b5563;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 .button {
@@ -116,32 +207,80 @@ footer {
     background: #2563eb;
     color: white;
     text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 8px;
+    padding: 14px 30px;
+    border-radius: 9px;
     margin-top: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.2s;
 }
 
 .button:hover {
     background: #1d4ed8;
+    transform: translateY(-2px);
 }
 
-@media (max-width: 600px) {
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #111827;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
 
     header h1 {
-        font-size: 35px;
+        font-size: 38px;
+    }
+
+    nav {
+        flex-direction: column;
     }
 
     nav a {
         display: block;
-        margin: 15px;
+        margin: 10px;
     }
 
     main {
-        padding: 0 15px;
+        padding: 40px 15px;
+    }
+
+    .intro h2 {
+        font-size: 34px;
+    }
+
+    .category h2 {
+        font-size: 28px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
     }
 
     .card {
         width: 100%;
+        max-width: 500px;
+    }
+
+    .cta {
+        padding: 40px 20px;
     }
 
 }
@@ -152,77 +291,198 @@ footer {
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
 
 <h1>Codext™</h1>
 
 <nav>
+
 <a href="index.html">Home</a>
-<a href="services.html" class="active">Services</a>
-<a href="index.html#pricing">Pricing</a>
+
+<a href="services.html" class="active">Services & Pricing</a>
+
 <a href="how.html">How It Works</a>
+
 <a href="about.html">About</a>
+
 <a href="faq.html">FAQ</a>
+
 <a href="index.html#contact">Contact</a>
+
 </nav>
 
 </header>
 
+
+<!-- =========================
+     MAIN
+========================= -->
+
 <main>
+
 
 <div class="intro">
 
-<h2>Our Services</h2>
+<h2>Services & Pricing</h2>
 
 <p>
-Codext™ provides practical technology solutions for small businesses,
-helping them build, manage, improve, and protect their digital presence.
+Professional technology solutions designed to help small businesses
+build, manage, improve, and protect their digital presence.
 </p>
 
 </div>
 
+
+
+<!-- =========================
+     WEBSITE PACKAGES
+========================= -->
 
 <section class="category">
 
-<h2>🌐 Websites</h2>
+<h2>🌐 Website Packages</h2>
 
 <div class="cards">
 
-<div class="card">
-<h3>Website Development</h3>
-<p>
-Professional, mobile-friendly websites designed for small businesses,
-organizations, and projects.
-</p>
-</div>
 
 <div class="card">
-<h3>Website Maintenance</h3>
+
+<span class="badge">Starter</span>
+
+<h3>Starter Website</h3>
+
+<p class="price">$80</p>
+
 <p>
-Keep your website updated, working properly, and maintained over time.
+• 1-page website<br>
+• Modern professional design<br>
+• Contact information section<br>
+• Services section<br>
+• <strong>2 Free Revisions</strong>
 </p>
+
 </div>
 
-<div class="card">
-<h3>Website Updates & Improvements</h3>
-<p>
-Make changes to existing websites, including pages, content, links,
-images, and layout improvements.
-</p>
-</div>
 
 <div class="card">
-<h3>Basic SEO Setup</h3>
+
+<span class="badge">Standard</span>
+
+<h3>Business Website</h3>
+
+<p class="price">$120</p>
+
 <p>
-Improve the basic search-engine setup of your website so search engines
-can better understand your content.
+• Up to 2 pages<br>
+• Professional design<br>
+• Mobile-friendly layout<br>
+• Contact page<br>
+• Services & About page<br>
+• Priority support<br>
+• <strong>3 Free Revisions</strong>
 </p>
+
 </div>
+
+
+<div class="card">
+
+<span class="badge">Premium</span>
+
+<h3>Premium Website</h3>
+
+<p class="price">$200</p>
+
+<p>
+• Up to 3 pages<br>
+• Custom website design<br>
+• Mobile-friendly layout<br>
+• Contact page<br>
+• Services & About page<br>
+• Priority support<br>
+• <strong>5 Free Revisions</strong>
+</p>
+
+</div>
+
 
 </div>
 
 </section>
 
+
+
+<!-- =========================
+     WEBSITE SERVICES
+========================= -->
+
+<section class="category">
+
+<h2>🛠️ Website Services</h2>
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>Website Maintenance</h3>
+
+<p class="price">Custom Pricing</p>
+
+<p>
+Keep your website updated, working properly,
+and maintained over time.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Website Updates & Improvements</h3>
+
+<p class="price">From $30</p>
+
+<p>
+Update website text, images, links, pages,
+and basic layout elements.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Basic SEO Setup</h3>
+
+<p class="price">$50</p>
+
+<p>
+Basic search-engine setup including page titles,
+descriptions, and fundamental SEO improvements.
+</p>
+
+</div>
+
+
+</div>
+
+<p class="note">
+Larger website projects may receive a custom quote.
+</p>
+
+</section>
+
+
+
+<!-- =========================
+     BUSINESS VISIBILITY
+========================= -->
 
 <section class="category">
 
@@ -230,26 +490,45 @@ can better understand your content.
 
 <div class="cards">
 
-<div class="card">
-<h3>Google Business Profile Setup</h3>
-<p>
-Help businesses set up their Google Business Profile with accurate
-business information and important details.
-</p>
-</div>
 
 <div class="card">
-<h3>Google Business Profile Optimization</h3>
+
+<h3>Google Business Profile Setup</h3>
+
+<p class="price">Custom Pricing</p>
+
 <p>
-Improve and organize an existing Google Business Profile to provide
-customers with clearer and more useful information.
+Help set up your Google Business Profile with
+accurate business information and important details.
 </p>
+
 </div>
+
+
+<div class="card">
+
+<h3>Google Business Profile Optimization</h3>
+
+<p class="price">$40</p>
+
+<p>
+Improve and organize an existing Google Business
+Profile to make business information clearer
+and more useful for customers.
+</p>
+
+</div>
+
 
 </div>
 
 </section>
 
+
+
+<!-- =========================
+     BUSINESS TECHNOLOGY
+========================= -->
 
 <section class="category">
 
@@ -257,26 +536,45 @@ customers with clearer and more useful information.
 
 <div class="cards">
 
-<div class="card">
-<h3>Technology Support</h3>
-<p>
-Practical technology support for small businesses dealing with common
-website, computer, and technology problems.
-</p>
-</div>
 
 <div class="card">
-<h3>Business Email Setup</h3>
+
+<h3>Technology Support</h3>
+
+<p class="price">Custom Pricing</p>
+
 <p>
-Help businesses set up and organize professional email accounts for
-their business.
+Practical technology support for small businesses
+dealing with common website, computer, and
+technology problems.
 </p>
+
 </div>
+
+
+<div class="card">
+
+<h3>Business Email Setup</h3>
+
+<p class="price">$35</p>
+
+<p>
+Help businesses set up professional business
+email accounts and basic email configuration.
+</p>
+
+</div>
+
 
 </div>
 
 </section>
 
+
+
+<!-- =========================
+     CYBERSECURITY
+========================= -->
 
 <section class="category">
 
@@ -284,34 +582,90 @@ their business.
 
 <div class="cards">
 
+
 <div class="card">
-<h3>Business Cybersecurity Training</h3>
+
+<span class="badge">Starter</span>
+
+<h3>Small Team Training</h3>
+
+<p class="price">$100</p>
+
 <p>
-Help employees recognize phishing, scams, unsafe passwords, and other
-common cybersecurity risks.
+Up to 10 employees.<br>
+Cybersecurity basics, phishing awareness,
+and password safety.
 </p>
+
 </div>
+
+
+<div class="card">
+
+<span class="badge">Popular</span>
+
+<h3>Business Security Package</h3>
+
+<p class="price">$250</p>
+
+<p>
+Up to 30 employees.<br>
+Includes security lessons, examples,
+and safety guides.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<span class="badge">Advanced</span>
+
+<h3>Company Protection Plan</h3>
+
+<p class="price">$500</p>
+
+<p>
+Custom cybersecurity education
+for larger teams.
+</p>
+
+</div>
+
 
 </div>
 
 </section>
 
 
-<div class="intro">
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
 
 <h2>Ready to Get Started?</h2>
 
 <p>
 Have a technology project or need help with your business?
-Get in touch with Codext™.
+Let's find the right solution for you.
 </p>
 
-<a class="button" href="contact.html">Get Started</a>
+<a class="button" href="contact.html">
+Get Started
+</a>
 
-</div>
+</section>
+
 
 </main>
 
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -324,6 +678,7 @@ Cybersecurity Education • Google Business Setup • Technology Support • Web
 </p>
 
 </footer>
+
 
 </body>
 </html>
